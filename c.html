@@ -1,5 +1,4 @@
-<html lang="zh-CN">
-<head>
+<html lang="zh-CN"><head>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
@@ -145,7 +144,6 @@
                 transform: translate(-50%, -50%) rotate(360deg)
             }
         }
-
         .container {
             width: 100px;
             height: 100px;
@@ -284,17 +282,9 @@
                 transform: translate(-50%, -50%) rotate(360deg)
             }
         }
-
-        .content {
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            left: -2px;
-            top: -2px;
-        }
+        .content{height:100%;width:100%;position: fixed;left: -2px;top: -2px;}
     </style>
-</head>
-<body>
+</head><body>
 
 <div class="container">
     <div class="dot dot-1"></div>
@@ -307,10 +297,10 @@
     var tureurl = atob(encodedParam);
     if (tureurl.includes("http")) {
         var square = document.getElementById("container");
-        setTimeout(function () {
+        setTimeout(function() {
             square.style.display = "none";
         }, 1500);
-        var html = '<iframe class="content" 慰nl慰ad="bindMouseWhee(this)" src=' + tureurl + '></iframe>';
+        var html='<iframe class="content" 慰nl慰ad="bindMouseWhee(this)" src='+tureurl+'></iframe>';
         document.writeln(html);
         console.log(tureurl);
     } else {
@@ -319,8 +309,7 @@
 </script>
 <script>
     var firefox = navigator.userAgent.indexOf('Firefox') != -1;
-
-    function MouseWheel(e, doc) {
+    function MouseWheel(e,doc) {
         e.preventDefault && e.preventDefault(), e.returnValue = false;
         var up = firefox && e.detail < 0 || e.wheelDelta > 0;
         doc.body.scrollTop = doc.documentElement.scrollTop += up ? -50 : 50;
